@@ -16,6 +16,15 @@ Express + PostgreSQL + JaveScriptで作ったメモアプリ。
 
 ---
 
+## 感想
+
+- TypeScriptの出番がなかったのが少し残念...
+- app.jsを書くのが大変だった。
+- formの扱いの理解の浅さを痛感した。
+- PostgreSQLに慣れてないので学習サイトと本で学びたい。
+
+---
+
 ## ローカル起動方法(Docsのusage.mdにも書いてあります。)
 
 - 1.MyMemo1フォルダのターミナルで以下を実行<br>
@@ -49,4 +58,3 @@ erDiagram
         timestamptz created_at
         timestamptz updated_at
     }
-
