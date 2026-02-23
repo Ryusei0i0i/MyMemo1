@@ -75,7 +75,7 @@ document.addEventListener('submit', async (e) => {
     const title = form.querySelector(`input[name='title']`).value;
     const content = form.querySelector(`textarea[name='content']`).value;
 
-    await fetch(`/memos/update/${id}`, {
+    await fetch(`/memos/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content })

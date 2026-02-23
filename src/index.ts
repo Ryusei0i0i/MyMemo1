@@ -33,7 +33,7 @@ app.post('/memos', async (req, res) => {
     res.json({messae: 'OK!'})
 })
 
-app.put('/memos/update/:id', async (req, res) => {
+app.put('/memos/:id', async (req, res) => {
     const { title, content } = req.body
     const id = Number(req.params.id)
     const result = await pool.query(`update memos set title = $1, content = $2, updated_at = NOW() where id = $3;`, [title, content, id])
