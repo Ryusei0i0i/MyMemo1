@@ -18,10 +18,12 @@ Express + PostgreSQL + JaveScriptで作ったメモアプリ。
 
 ## 感想
 
-- TypeScriptの出番がなかったのが少し残念...
-- app.jsを書くのが大変だった。
-- formの扱いの理解の浅さを痛感した。
-- PostgreSQLに慣れてないので学習サイトと本で学びたい。
+- app.jsを書くのが大変でした。formにidをつけ忘れていていました。
+- formの理解の浅さを痛感しました。
+- PostgreSQLに慣れてないのでもっと学びます。
+- 学習目的がExpressとPostgreSQLの基礎に慣れることなので、セキュリティやサイトのUI/UXはまったく考えていません。
+- SQLインジェクションとか怖いです。
+- APIのエンドポイントのパスはメソッドで区別できることを知りました。これまでは、/memos/updateや/memos/deleteのように書いていました。
 
 ---
 
@@ -47,7 +49,7 @@ Express + PostgreSQL + JaveScriptで作ったメモアプリ。
 - メモ削除(Delete)
 
 ---
-## データベース
+## データベースの構造
 
 ```mermaid
 erDiagram
