@@ -30,14 +30,14 @@ app.get('/memos', async (req, res) => {
 app.post('/memos', async (req, res) => {
     const {title, content} = req.body
     await pool.query('insert into memos (title, content) values ($1, $2);', [title, content])
-    res.json({messae: 'OK!'})
+    res.json({messae: 'POST!'})
 })
 
 app.put('/memos/:id', async (req, res) => {
     const { title, content } = req.body
     const id = Number(req.params.id)
     const result = await pool.query(`update memos set title = $1, content = $2, updated_at = NOW() where id = $3;`, [title, content, id])
-    res.json({message: 'OK!'})
+    res.json({message: 'UPDATE!'})
 })
 
 app.delete('/memos/:id', async (req, res) => {
@@ -50,13 +50,3 @@ app.delete('/memos/:id', async (req, res) => {
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000")
 })
-
-
-//データベース接続確認用コード
-
-// //show tables;
-// const result = await pool.query(`select table_name from information_schema.tables where table_schema = 'public' and table_type = 'BASE TABLE'`)
-// console.log(result.rows);
-// // check memos
-// const selectMemoId1 = await pool.query('select * from memos;')
-// console.log(selectMemoId1.rows)
