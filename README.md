@@ -18,7 +18,7 @@ Express + PostgreSQL + JaveScriptで作ったメモアプリ。
 
 ## 感想
 
-- app.jsを書くのが大変でした。formにidをつけ忘れていていました。
+- app.jsを書くのが大変でした。DOM操作でかなり苦戦したので、次のプロジェクトからはReactを導入しようと思います。
 - formの理解の浅さを痛感しました。
 - PostgreSQLに慣れてないのでもっと学びます。
 - 学習目的がExpressとPostgreSQLの基礎に慣れることなので、セキュリティやサイトのUI/UXはまったく考えていません。
